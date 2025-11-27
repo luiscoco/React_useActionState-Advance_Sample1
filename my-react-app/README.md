@@ -1,73 +1,50 @@
-# React + TypeScript + Vite
+# useActionState Learning Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive React 19 playground to teach `useActionState` across three progressive levels:
 
-Currently, two official plugins are available:
+- **Level 1 – Beginner:** Simple greeting form to introduce `[state, action, isPending]`.
+- **Level 2 – Intermediate:** Idea + tone + steps form with validation and a rolling log.
+- **Level 3 – Advanced:** Full playground with presets, sliders, success/error states, and history.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## React Compiler
+- Node.js 18+ recommended
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Quick start
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+cd my-react-app
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Open the URL Vite prints (default `http://localhost:5173`).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Build and preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run build
+npm run preview
 ```
+
+## What to explore
+
+- `useActionState` returns `[state, action, isPending]`; no manual loading toggles needed.
+- Forms are wired with `<form action={action}>`, so React feeds `FormData` into your action.
+- Returning new state objects drives the UI: success/error messaging, chips, and history/logs.
+- Quick-submit buttons call the action programmatically with a `FormData` instance.
+
+## Key files
+
+- `src/App.tsx` — tabbed layout for the three levels.
+- `src/components/BasicScreen.tsx` — beginner demo.
+- `src/components/IntermediateScreen.tsx` — intermediate demo with mini log.
+- `src/components/AdvancedScreen.tsx` — advanced playground and concept map.
+- `src/components/TiltCard.tsx` — card wrapper with hover highlight.
+- `src/App.css` — main styling and hover highlights.
+
+## Teaching notes
+
+- Start with the hook signature and the form wiring in Level 1.
+- Show validation and state shaping (including logs) in Level 2.
+- Highlight pending/success/error flows, history, and programmatic submits in Level 3.
