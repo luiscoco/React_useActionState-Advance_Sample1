@@ -6,12 +6,6 @@ An interactive React 19 playground to teach `useActionState` across three progre
 - **Level 2 – Intermediate:** Idea + tone + steps form with validation and a rolling log.
 - **Level 3 – Advanced:** Full playground with presets, sliders, success/error states, and history.
 
-## Demo
-
-Watch the application in action:
-
-![Application Demo](./app_features_demo.webp)
-
 ## Prerequisites
 
 - Node.js 18+ recommended
