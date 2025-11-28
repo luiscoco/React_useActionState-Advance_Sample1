@@ -10,13 +10,7 @@ An interactive React 19 playground to teach `useActionState` across three progre
 
 Watch the application in action:
 
-![Application Demo](./app_features_demo.webp)
-
-## Testing Features Demo
-
-Watch the testing features workflow:
-
-![Testing Features Demo](./testing_features_demo.webp)
+<img width="1568" height="961" alt="image" src="https://github.com/user-attachments/assets/8477b1e1-d413-44e1-bae1-86f7527c82b5" />
 
 ## Prerequisites
 
