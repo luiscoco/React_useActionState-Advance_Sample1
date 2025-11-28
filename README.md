@@ -10,6 +10,12 @@ An interactive React 19 playground to teach `useActionState` across three progre
 
 - Node.js 18+ recommended
 
+## Demo
+
+Watch the application in action:
+
+<img width="1568" height="961" alt="image" src="https://github.com/user-attachments/assets/8477b1e1-d413-44e1-bae1-86f7527c82b5" />
+
 ## Quick start
 
 ```bash
