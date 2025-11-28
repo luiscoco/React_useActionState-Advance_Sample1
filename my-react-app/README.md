@@ -12,6 +12,12 @@ Watch the application in action:
 
 ![Application Demo](./app_features_demo.webp)
 
+## Testing Features Demo
+
+Watch the testing features workflow:
+
+![Testing Features Demo](./testing_features_demo.webp)
+
 ## Prerequisites
 
 - Node.js 18+ recommended
